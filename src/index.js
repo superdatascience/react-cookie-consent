@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types'
+import Cookies from 'js-cookie';
 
 const CookieConsent = ({ cookieName, expires }) => {
-	console.log(cookieName, expires)
+
+
+	const setCookie = (cookieValue) => {
+		const cookieSecurity = location ? location.protocol === "https:" : true;
+		const cookieOptions = { expires, secure: cookieSecurity };
+		console.log(cookieName, cookieValue)
+		Cookies.set(cookieName, cookieValue, cookieOptions);
+	}
+
+	const handleAccept = () => {
+		setCookie(true);
+	}
+
 	return (
 		<div>
 			Cookie Consent here
+			<button onClick={handleAccept}>I Accept</button>
 		</div>
 	);
 }
