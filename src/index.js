@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types'
 import Cookies from 'js-cookie';
 
-const CookieConsent = ({ cookieName, expires, debug }) => {
+const CookieConsent = ({ cookieName, expires, debug, children, buttonText }) => {
 	const [isVisible, setIsVisible] = useState(true);
 
 	const getCookieValue = () => {
@@ -31,22 +31,25 @@ const CookieConsent = ({ cookieName, expires, debug }) => {
 
 	return (
 		<div>
-			Cookie Consent here
-			<button onClick={handleAccept}>I Accept</button>
+			{children}
+			<button onClick={handleAccept}>{buttonText}</button>
 		</div>
 	);
 }
 
 CookieConsent.propTypes = {
+	buttonText: PropTypes.string,
+	children: PropTypes.any.isRequired,
 	cookieName: PropTypes.string,
-	expires: PropTypes.number,
-	debug: PropTypes.bool
+	debug: PropTypes.bool,
+	expires: PropTypes.number
 };
 
 CookieConsent.defaultProps = {
+	buttonText: 'Accept',
 	cookieName: 'CookieConsent',
-	expires: 365,
-	debug: false
+	debug: false,
+	expires: 365
 };
 
 export default CookieConsent;
