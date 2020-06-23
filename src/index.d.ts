@@ -3,6 +3,7 @@ import * as React from 'react'
 interface CookieConsentProps {
 	readonly cookieName?: string,
 	readonly expires?: number
+	readonly debug?: boolean
 }
 type CookieConsentInterface = React.ComponentClass<CookieConsentProps>
 

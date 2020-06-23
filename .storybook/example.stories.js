@@ -6,7 +6,7 @@ export default { title: 'ExampleComponent' };
 export const Example = () => {
 	return (
 		<Fragment>
-			<CookieConsent/>
+			<CookieConsent debug={true} />
 		</Fragment>
 	);
 }

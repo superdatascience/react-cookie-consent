@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types'
 import Cookies from 'js-cookie';
 
-const CookieConsent = ({ cookieName, expires }) => {
+const CookieConsent = ({ cookieName, expires, debug }) => {
+	const [isVisible, setIsVisible] = useState(true);
 
+	const getCookieValue = () => {
+		// Legacy Cookie is being ignored
+		let cookieValue = Cookies.get(cookieName);
+		return cookieValue;
+	}
+
+	useEffect(() => {
+		const cookieValue = !getCookieValue();
+		setIsVisible(cookieValue);
+	}, [isVisible])
 
 	const setCookie = (cookieValue) => {
 		const cookieSecurity = location ? location.protocol === "https:" : true;
@@ -14,7 +25,9 @@ const CookieConsent = ({ cookieName, expires }) => {
 
 	const handleAccept = () => {
 		setCookie(true);
+		setIsVisible(false);
 	}
+	if (!isVisible && !debug) return null;
 
 	return (
 		<div>
@@ -26,12 +39,14 @@ const CookieConsent = ({ cookieName, expires }) => {
 
 CookieConsent.propTypes = {
 	cookieName: PropTypes.string,
-	expires: PropTypes.number
+	expires: PropTypes.number,
+	debug: PropTypes.bool
 };
 
 CookieConsent.defaultProps = {
 	cookieName: 'CookieConsent',
-	expires: 365
+	expires: 365,
+	debug: false
 };
 
 export default CookieConsent;
