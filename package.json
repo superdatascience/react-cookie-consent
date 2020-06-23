@@ -1,5 +1,5 @@
 {
-  "name": "sds-cookie-consent",
+  "name": "@superdatascience/react-cookie-consent",
   "version": "0.0.1",
   "description": "Cookie Consent simple package",
   "main": "dist/index.js",
@@ -8,6 +8,7 @@
     "start": "rollup -c -w",
     "storybook": "start-storybook"
   },
+  "typings": "src/index.d.ts",
   "keywords": [
     "cookie",
     "consent",
@@ -34,6 +35,11 @@
     "rollup-plugin-terser": "^6.1.0"
   },
   "files": [
-    "dist"
-  ]
+    "dist/**/*",
+    "src/index.d.ts"
+  ],
+  "dependencies": {
+    "js-cookies": "^1.0.4",
+    "prop-types": "^15.7.2"
+  }
 }

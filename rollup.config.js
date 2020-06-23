@@ -13,15 +13,22 @@ export default {
 			format: 'cjs'
 		}
 	],
+	// exclude peerDependencies from our bundle
+	external: Object.keys(pkg.peerDependencies),
 	plugins: [
 		babel({
 			exclude: 'node_modules/**',
 			presets: ['@babel/preset-react']
 		}),
 		postcss({
-			extensions: ['.css']
+			extensions: ['.css'],
+			minimize: true
 		}),
-		resolve(),
+		resolve({
+			customResolveOptions: {
+				moduleDirectory: 'node_modules'
+			}
+		}),
 		commonjs(),
 		terser()
 	],
