@@ -39,7 +39,7 @@
     "src/index.d.ts"
   ],
   "dependencies": {
-    "js-cookies": "^1.0.4",
+    "js-cookie": "^2.2.1",
     "prop-types": "^15.7.2"
   }
 }
