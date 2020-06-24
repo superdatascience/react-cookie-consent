@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types'
 import Cookies from 'js-cookie';
+import './styles.css';
 
 const CookieConsent = ({ cookieName, expires, debug, children, buttonText }) => {
 	const [isVisible, setIsVisible] = useState(true);
@@ -30,7 +31,7 @@ const CookieConsent = ({ cookieName, expires, debug, children, buttonText }) => 
 	if (!isVisible && !debug) return null;
 
 	return (
-		<div>
+		<div className="cookie-consent">
 			{children}
 			<button onClick={handleAccept}>{buttonText}</button>
 		</div>

@@ -1,0 +1,13 @@
+.cookie-consent {
+	align-items: center;
+	background-color: black;
+	bottom: 0;
+	color: #ffffff;
+	display: flex;
+	height: 110px;
+	justify-content: space-evenly;
+	padding: 25px;
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+}
