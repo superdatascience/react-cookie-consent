@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "test": "jest"
   },
   "typings": "src/index.d.ts",
   "keywords": [
@@ -22,14 +23,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
     "@rollup/plugin-babel": "^5.0.3",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@storybook/react": "^5.3.19",
+    "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
+    "jest": "^26.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "rollup": "^2.16.1",
     "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-terser": "^6.1.0"
@@ -41,5 +46,10 @@
   "dependencies": {
     "js-cookie": "^2.2.1",
     "prop-types": "^15.7.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
