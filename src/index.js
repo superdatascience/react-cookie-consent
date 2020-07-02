@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 const CookieConsent = () => {
 	return (
 		<div>
 			Cookie Consent here
 		</div>
-	);
-};
+	)
+}
 
-export default CookieConsent;
+export default CookieConsent
