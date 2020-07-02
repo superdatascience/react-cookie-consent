@@ -1,39 +1,39 @@
 {
-  "name": "sds-cookie-consent",
-  "version": "0.0.1",
-  "description": "Cookie Consent simple package",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w",
-    "storybook": "start-storybook"
-  },
-  "keywords": [
-    "cookie",
-    "consent",
-    "react"
-  ],
-  "author": "superdatascience",
-  "license": "MIT",
-  "peerDependencies": {
-    "react": ">=16.13.1",
-    "react-dom": ">=16.13.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
-    "@rollup/plugin-babel": "^5.0.3",
-    "@rollup/plugin-commonjs": "^13.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.1",
-    "@storybook/react": "^5.3.19",
-    "babel-loader": "^8.1.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "rollup": "^2.16.1",
-    "rollup-plugin-postcss": "^3.1.2",
-    "rollup-plugin-terser": "^6.1.0"
-  },
-  "files": [
-    "dist"
-  ]
+	"name": "@superdatascience/react-cookie-consent",
+	"version": "0.0.1",
+	"description": "Cookie Consent simple package",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "rollup -c",
+		"start": "rollup -c -w",
+		"storybook": "start-storybook"
+	},
+	"keywords": [
+		"cookie",
+		"consent",
+		"react"
+	],
+	"author": "superdatascience",
+	"license": "MIT",
+	"peerDependencies": {
+		"react": ">=16.13.1",
+		"react-dom": ">=16.13.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.10.4",
+		"@babel/preset-react": "^7.10.4",
+		"@rollup/plugin-babel": "^5.0.3",
+		"@rollup/plugin-commonjs": "^13.0.0",
+		"@rollup/plugin-node-resolve": "^8.0.1",
+		"@storybook/react": "^5.3.19",
+		"babel-loader": "^8.1.0",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"rollup": "^2.18.2",
+		"rollup-plugin-postcss": "^3.1.2",
+		"rollup-plugin-terser": "^6.1.0"
+	},
+	"files": [
+		"dist"
+	]
 }
