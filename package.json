@@ -1,5 +1,5 @@
 {
-  "name": "sds-cookie-consent",
+  "name": "@superdatascience/react-cookie-consent",
   "version": "0.0.1",
   "description": "Cookie Consent simple package",
   "main": "dist/index.js",
@@ -8,6 +8,7 @@
     "start": "rollup -c -w",
     "storybook": "start-storybook"
   },
+  "typings": "src/index.d.ts",
   "keywords": [
     "cookie",
     "consent",
@@ -27,6 +28,13 @@
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
+    "eslint": "^7.3.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-standard": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.16.1",
@@ -34,6 +42,11 @@
     "rollup-plugin-terser": "^6.1.0"
   },
   "files": [
-    "dist"
-  ]
+    "dist/**/*",
+    "src/index.d.ts"
+  ],
+  "dependencies": {
+    "js-cookie": "^2.2.1",
+    "prop-types": "^15.7.2"
+  }
 }
