@@ -1,6 +1,6 @@
 // Link.react.test.js
 import React from 'react';
-import CookieConsent from './src/index';
+import CookieConsent from '../src/index';
 import renderer from 'react-test-renderer';
 import TestRenderer from 'react-test-renderer';
 const {act} = TestRenderer;
