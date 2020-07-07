@@ -19,7 +19,8 @@ export default {
 			presets: ["@babel/preset-react"]
 		}),
 		postcss({
-			extensions: [".css"]
+			extensions: [".css"],
+			minimize: true
 		}),
 		resolve(),
 		commonjs(),
